@@ -5,6 +5,8 @@
  */
 package código2508;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author dtorres9
@@ -16,16 +18,22 @@ public class Código2508 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        JOptionPane.showMessageDialog(null, "Bem-vindo! Informe 2 \n valores para realizar as \n 4 operações matemáticas!");
        
-        Calculadora c1 = new Calculadora(6,5);
-        Calculadora cDefecto = new Calculadora();
+        Calculadora c1 = new Calculadora(Double.parseDouble(JOptionPane.showInputDialog("Insira o promeiro valor:")),
+                                         Double.parseDouble(JOptionPane.showInputDialog("Insira o segundo valor:")));
+        
+        //UMA INSTÂNCIA JÁ É O SUFICIENTE
+        //Calculadora cDefecto = new Calculadora();
         //dav_branch example
-        cDefecto.Resultado();
-        System.out.println("Con valores:");
+        c1.Resultado();
+        
+        /* System.out.println("Con valores:");
         System.out.println(c1.Suma());
         System.out.println(c1.Resta());
         System.out.println(c1.Multiplicacion());
-        System.out.println(c1.Division());
+        System.out.println(c1.Division()); */
     }
     
 }
