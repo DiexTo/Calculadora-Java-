@@ -5,6 +5,8 @@
  */
 package código2508;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author dtorres9
@@ -16,8 +18,9 @@ public class Calculadora {
     //Constructor Vacío
     public Calculadora()
     {
-        this.iOperadorA = 10;
-        this.iOperadorB = 8;
+        //ALTERAÇÃO NO RECEBIMENTO DOS DADOS
+        this.iOperadorA = Double.parseDouble(JOptionPane.showInputDialog("Insira o primeiro valor"));
+        this.iOperadorB = Double.parseDouble(JOptionPane.showInputDialog("Insira o segundo valor"));
     }
 //Constructor
     public Calculadora(double iOperadorA, double iOperadorB) {
@@ -63,11 +66,17 @@ public class Calculadora {
     }
 
     public void Resultado(){
-        System.out.println("dav_branch");
+        
+        JOptionPane.showMessageDialog(null, "Suma: " + Suma() + 
+                                            "\nResta: " + Resta() +
+                                            "\nMultiplicacion: " + Multiplicacion() +
+                                            "\nDivision: " + Division());
+        
+        /*System.out.println("dav_branch");
         System.out.println(Suma());
         System.out.println(Resta());
         System.out.println(Multiplicacion());
-        System.out.println(Division());
+        System.out.println(Division());*/
     }
     
 }
